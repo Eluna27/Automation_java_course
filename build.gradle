@@ -3,6 +3,7 @@
  *
  * This generated file contains a sample Java application project to get you started.
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/8.8/userguide/building_java_projects.html in the Gradle documentation.
+ * Download dependencies go to: https://mvnrepository.com/
  */
 
 plugins {
@@ -23,6 +24,24 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+    
+    //Selenium
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.29.0'
+
+    //TestNG
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.11.0'
+
+    //Cucumber for Java
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation 'io.cucumber:cucumber-java:7.21.1'
+
+    //Cucumber JUnit    
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation 'io.cucumber:cucumber-junit:7.21.1'
+
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -30,11 +49,6 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
-}
-
-application {
-    // Define the main class for the application.
-    mainClass = 'curso_java.App'
 }
 
 tasks.named('test') {
